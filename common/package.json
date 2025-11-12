@@ -1,9 +1,0 @@
-{
-  "name": "@videotube/common",
-  "version": "1.0.0",
-  "main": "src/index.js",
-  "type": "module",
-  "dependencies": {
-    "ioredis": "^5.8.2"
-  }
-}
