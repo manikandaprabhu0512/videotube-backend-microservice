@@ -1,0 +1,31 @@
+syntax = "proto3";
+package video;
+
+service VideoService {
+  rpc getBulkVideosList (BulkVideoRequest) returns (BulkVideoResponse);
+}
+
+message BulkVideoRequest {
+  repeated string VideoIds = 1;
+}
+
+message Image {
+    string url = 1;
+    string public_id = 2;
+}
+
+message Video {
+  string id = 1;
+  string title = 2;
+  string description = 3;
+  string owner = 4;
+  Image thumbnail = 5;
+  string duration = 6;
+  Image videoFile = 7;
+  string views = 8;
+  string createdAt = 9;
+}
+
+message BulkVideoResponse {
+  repeated Video videos = 1;
+}

@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Like {
+  id        String   @id @default(uuid())
+  userId    String
+  likedVideo   String?
+  likedComment   String?
+  likedTweet   String?
+  createdAt DateTime @default(now())
+
+  @@unique([userId, likedVideo])
+  @@unique([userId, likedComment])
+  @@unique([userId, likedTweet])
+}
+

@@ -1,0 +1,62 @@
+# --- Node dependencies ---
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# --- Environment files ---
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# --- Logs and temporary files ---
+logs
+*.log
+*.tmp
+*.out
+*.pid
+*.seed
+*.pid.lock
+
+# --- Build and cache directories ---
+dist
+build
+.cache
+coverage
+.next
+.nuxt
+out
+tmp
+temp
+
+# --- Version control ---
+.git
+.gitignore
+.gitattributes
+.gitmodules
+
+# --- Editor and system files ---
+.vscode
+.idea
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Docker-specific ---
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# --- OS-level junk ---
+*.bak
+*.orig
+*.old
+*.rej
+*.zip
+*.tar
+*.tar.gz

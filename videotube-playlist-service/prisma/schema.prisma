@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model VideoTubePlaylist {
+  id          String      @id @default(uuid())
+  name       String @unique
+  description String
+  thumbnail  String[] @default([])
+  userId     String
+  createdAt   DateTime @default(now())
+  videos      String[] @default([])
+}

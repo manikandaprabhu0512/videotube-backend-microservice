@@ -1,0 +1,26 @@
+syntax = "proto3";
+package user;
+
+service UserService{
+    rpc getBulkUsersList (BulkUserRequest) returns (BulkUserResponse);
+}
+
+message BulkUserRequest {
+  repeated string UserIds = 1;
+}
+
+message Image {
+    string url = 1;
+    string public_id = 2;
+}
+
+message User {
+    string username = 1;
+    string fullName = 2;
+    Image avatar = 3;
+    string _id = 4;
+}
+
+message BulkUserResponse {
+  repeated User users = 1;
+}

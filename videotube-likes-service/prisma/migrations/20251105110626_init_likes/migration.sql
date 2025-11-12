@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE "Like" ALTER COLUMN "likedComment" DROP NOT NULL,
+ALTER COLUMN "likedTweet" DROP NOT NULL,
+ALTER COLUMN "likedVideo" DROP NOT NULL;
